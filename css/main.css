@@ -101,9 +101,15 @@ a {
 }
 
 .page-header {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   border-bottom: 1px solid #ECECEC;
+}
+@media screen and (min-width: 1200px) {
+  .page-header {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 }
 
 .header-container-new {
@@ -210,6 +216,7 @@ a {
 @media screen and (min-width: 768px) {
   .menu-contacts.list {
     display: flex;
+    gap: 10px;
     flex-direction: column;
     align-items: baseline;
   }
@@ -603,8 +610,8 @@ a {
 .about-team {
   color: var(--title-text-color);
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.18;
   letter-spacing: 0.03em;
   text-align: center;
   margin-bottom: 30px;
@@ -612,6 +619,8 @@ a {
 @media screen and (min-width: 1200px) {
   .about-team {
     margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.16;
   }
 }
 
@@ -839,6 +848,7 @@ a {
 @media screen and (min-width: 1200px) {
   .container.footer {
     display: flex;
+    flex-wrap: nowrap;
     align-items: baseline;
     text-align: left;
   }
@@ -900,8 +910,13 @@ a {
   color: var(--white-color);
 }
 
+.join-wrap {
+  width: 100%;
+}
+
 .btn-submit-title {
   display: flex;
+  margin: 0 auto;
   color: var(--white-color);
   background-color: var(--accent-color);
   border-radius: 4px;
@@ -936,7 +951,7 @@ a {
 
 .email-text {
   height: 50px;
-  width: 450px;
+  width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
@@ -949,6 +964,16 @@ a {
   color: var(--white-color);
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .email-text {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .email-text {
+    width: 358px;
+  }
 }
 .email-text::-moz-placeholder {
   color: var(--color-address);
@@ -994,6 +1019,7 @@ a {
 @media screen and (min-width: 1200px) {
   .logo-contact {
     text-align: left;
+    margin-right: 70px;
   }
 }
 
@@ -1009,6 +1035,12 @@ a {
 .soc {
   text-align: center;
   margin-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .soc {
+    margin-left: 0;
+    margin-right: 93px;
+  }
 }
 
 .web {
@@ -1225,8 +1257,8 @@ a {
 }
 
 .modal {
-  width: 528px;
-  min-height: 581px;
+  min-width: 450px;
+  min-height: 609px;
   background-color: var(--white-color);
   border-radius: 4px;
   position: absolute;
@@ -1237,6 +1269,12 @@ a {
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
+  }
 }
 
 .icon-close-black-18dp-2-1-1 {

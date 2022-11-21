@@ -5,10 +5,13 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     transition: opacity 250ms linear, visibility 250ms linear;
+   
 }
 .modal {
-    width: 528px;
-    min-height: 581px;
+    // width: 528px;
+    // min-height: 581px;
+    min-width: 450px;
+    min-height: 609px;
     background-color: var(--white-color);
     border-radius: 4px;
     position: absolute;
@@ -19,7 +22,13 @@
 .backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(0);
     }
+
+    @media screen and (min-width: 1200px) {
+    width: 528px;
+    min-height: 581px;
 }
+}
+
 .icon-close-black-18dp-2-1-1 {
     background: var(--white-color);
 }
